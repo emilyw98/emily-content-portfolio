@@ -10,6 +10,7 @@ import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+import { Link } from "react-router-dom";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -78,6 +79,9 @@ export default ({
   imageContainerCss = null,
   imageCss = null
 }) => {
+  cards.forEach(card => {
+    console.log(card.url);
+  });
   /*
    * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
    *  1) imageSrc - the image shown at the top of the card
@@ -94,7 +98,8 @@ export default ({
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
-              <Card href={card.url}>
+              <Link to={card.url}>
+              <Card>
                 <span className="imageContainer" css={imageContainerCss}>
                   <img src={card.imageSrc} alt="" css={imageCss} />
                 </span>
@@ -107,6 +112,7 @@ export default ({
                   </span>
                 )}
               </Card>
+              </Link>
             </Column>
           ))}
         </ThreeColumnContainer>
