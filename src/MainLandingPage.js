@@ -75,7 +75,7 @@ export default () => {
           </>
         }
       />
-      <Features
+      {/* <Features
         heading={
           <>
             Browse portfolio <HighlightedText>by company</HighlightedText>
@@ -116,7 +116,7 @@ export default () => {
 
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
-      />
+      /> */}
       {/* <MainFeature2
         subheading={<Subheading>A Reputed Brand</Subheading>}
         heading={<>Why <HighlightedText>Choose Us ?</HighlightedText></>}
