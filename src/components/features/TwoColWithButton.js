@@ -4,8 +4,9 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import PortfolioPicSrc from "images/PortfolioPicSrc.png";
 import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
+import { Link } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -41,16 +42,16 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
 
 
 export default ({
-  subheading = "Our Expertise",
+subheading = "",
   heading = (
     <>
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
-  imageSrc = TeamIllustrationSrc,
+  imageSrc = PortfolioPicSrc,
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
@@ -66,7 +67,17 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
+          <a
+            href="https://docs.google.com/presentation/d/1W7ckm5-TeCex2a0dg-o1e3OGxuN6kZaT0GUQP4vXuqs/edit?usp=sharing" target="_blank" rel="noreferrer"
+          >
+            <Image 
+              css={imageCss} 
+              src={imageSrc} 
+              imageBorder={imageBorder} 
+              imageShadow={imageShadow} 
+              imageRounded={imageRounded}
+            />
+          </a>
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>

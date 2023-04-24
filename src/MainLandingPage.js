@@ -33,7 +33,7 @@ export default () => {
     <AnimationRevealPage>
       <Hero
         heading={<>Hi, I'm < HighlightedText>Emily Wong</HighlightedText></>}
-        description="I’m a content specialist, copywriter, and social media manager— all on top of my full-time job as a product analyst. Keep reading to check out what I've been working on."
+        description="I’m a content specialist, copywriter, and social media manager with a passion for growing companies and connecting with niche audiences. Keep reading to check out what I've been working on."
         imageSrc={emilyImageSrc}
         imageCss={imageCss}
         imageDecoratorBlob={true}
@@ -75,10 +75,18 @@ export default () => {
           </>
         }
       />
+      <MainFeature
+        heading={
+          <>
+            Check out <HighlightedText>my portfolio</HighlightedText>
+          </>
+        }
+        description = "Flip through an up-to-date summary on my work, content samples, and strategies for success in each of my projects and roles."
+      />
       <Features
         heading={
           <>
-            Browse portfolio <HighlightedText>by company</HighlightedText>
+            Browse my career history <HighlightedText>by company</HighlightedText>
           </>
         }
         cards={[
